@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
+</head>
+<body>
+<div id="mocha"></div>
+
+<!-- using the chai assertion library -->
+<script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
+<script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+
+<script>mocha.setup('bdd')</script>
+
+<!-- only test files included, as they import the source code.
+Note the script type is "module" -->
+<script type="module" src="./test/card.test.js"></script>
+<script type="module" src="./test/deck.test.js"></script>
+<script type="module" src="./test/deal.test.js"></script>
+<script type="module" src="./test/shuffle.test.js"></script>
+<script type="module" src="./test/sort.test.js"></script>
+
+<!-- these have been changed to "module" script type to preserve execution order -->
+<script type="module">
+    mocha.checkLeaks();
+    mocha.run();
+</script>
+</body>
+</html>
