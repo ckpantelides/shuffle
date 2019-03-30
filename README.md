@@ -14,11 +14,11 @@ to load the local server, run the command "serve" from inside the projects direc
 
 >serve
 
-open source.html, and then go to the console to see the results of the shuffle:
+open *source.html*, and then go to the console to see the results of the shuffle:
 
 ![img1]
 
 [img1]: https://github.com/ckpantelides/shuffle/blob/assets/shuffle.PNG
 
-open test.html to run the Mocha tests. The Mocha default header has been amended to test ES6
+open *test.html* to run the Mocha tests. The Mocha default header has been amended to test ES6
 modules
